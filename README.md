@@ -1,4 +1,4 @@
-# vue3_lightaudio
+# vue3_equipment1
 
 ## Project setup
 ```

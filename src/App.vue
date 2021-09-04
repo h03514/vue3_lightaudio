@@ -1,17 +1,35 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
+  <!-- <HelloWorld></HelloWorld> -->
+  <!-- <testEmit1></testEmit1> -->
+  <mainPage></mainPage>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import mainPage from "./components/mainPage.vue";
+
+import { reactive } from "vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
+    mainPage
+  },
+
+  setup() {
+    let btnMsg = reactive({
+      name: "Computer"
+    });
+    function showEquipmentData(da) {
+      // this.flag = !this.flag;'
+      btnMsg.name = da;
+    }
+    return {
+      showEquipmentData,
+      btnMsg
+    };
   }
-}
+};
 </script>
 
 <style>
@@ -21,6 +39,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
+
+
