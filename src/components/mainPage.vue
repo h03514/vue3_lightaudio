@@ -5,70 +5,191 @@
     </nav>
   </header>
   <main>
-    <div class="container">
-      <div class="row">
-        <div class="dropdown text-start">
-          <button
-            class="btn btn-secondary dropdown-toggle"
-            type="button"
-            id="dropdownMenuButton1"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            {{ modelType }}
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li>
-              <a class="dropdown-item" href="#" @click="typeSel" vlaue="audio"
-                >外場音響</a
-              >
-            </li>
-            <li>
-              <a
-                class="dropdown-item"
-                href="#"
-                @click="typeSel"
-                value="spotlight"
-                >Spot Light</a
-              >
-            </li>
-            <li>
-              <a class="dropdown-item" href="#" @click="typeSel" value="truss"
-                >Truss</a
-              >
-            </li>
-            <li>
-              <a
-                class="dropdown-item"
-                href="#"
-                @click="typeSel"
-                value="microphone"
-                >麥克風組</a
-              >
-            </li>
-            <li>
-              <a
-                class="dropdown-item"
-                href="#"
-                @click="typeSel"
-                value="instrument"
-                >樂器</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="row">
+    <div class="container-fluid">
+      <div class="row flex-nowrap">
         <div
-          v-for="(item, index) in equipmentVal"
-          :key="index"
-          class="col-3 item"
+          class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark navLeftSide"
         >
-          <div class="itemDiv">
-            <div class="img"><img :src="item.photo" width="100" alt="" /></div>
-            <h5>{{ item.type }}</h5>
-            <p class="intro">{{item.intro}}</p>
-            <button class="btn btn-secondary">加入購物車</button>
+          <div
+            class="
+              d-flex
+              flex-column
+              align-items-center align-items-sm-start
+              px-3
+              pt-2
+              text-white
+              min-vh-100
+            "
+          >
+            <li class="nav-item">
+              <a href="#" class="nav-link align-middle px-0">
+                <i class="fs-4 bi-house"></i>
+                <span class="ms-1 d-none d-sm-inline"></span>
+              </a>
+            </li>
+            <a
+              href="/"
+              class="
+                d-flex
+                align-items-center
+                pb-3
+                mb-md-0
+                me-md-auto
+                text-white text-decoration-none
+              "
+            >
+              <span class="fs-5 d-none d-sm-inline">Menu</span>
+            </a>
+            <ul
+              class="
+                nav nav-pills
+                flex-column
+                mb-sm-auto mb-0
+                align-items-center align-items-sm-start
+              "
+              id="menu"
+            >
+              <li>
+                <a
+                  href="#submenu1"
+                  data-bs-toggle="collapse"
+                  class="nav-link px-0 align-middle"
+                  @click="typeSel"
+                  vlaue="audio"
+                >
+                  <i class="fs-4 bi-speedometer2"></i>
+                  <span class="ms-1 d-none d-sm-inline">外場音響</span>
+                </a>
+                <!-- <ul
+                  class="collapse show nav flex-column ms-1"
+                  id="submenu1"
+                  data-bs-parent="#menu"
+                >
+                  <li class="w-100">
+                    <a href="#" class="nav-link px-0">
+                      <span class="d-none d-sm-inline">Item</span> 1
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link px-0">
+                      <span class="d-none d-sm-inline">Item</span> 2
+                    </a>
+                  </li>
+                </ul> -->
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="nav-link px-0 align-middle"
+                  @click="typeSel"
+                  value="spotlight"
+                >
+                  <i class="fs-4 bi-table"></i>
+                  <span class="ms-1 d-none d-sm-inline">Spot Light</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="#submenu2"
+                  data-bs-toggle="collapse"
+                  class="nav-link px-0 align-middle"
+                  @click="typeSel"
+                  value="truss"
+                >
+                  <i class="fs-4 bi-bootstrap"></i>
+                  <span class="ms-1 d-none d-sm-inline">Truss</span></a
+                >
+                <!-- <ul
+                  class="collapse nav flex-column ms-1"
+                  id="submenu2"
+                  data-bs-parent="#menu"
+                >
+                  <li class="w-100">
+                    <a href="#" class="nav-link px-0">
+                      <span class="d-none d-sm-inline">Item</span> 1</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link px-0">
+                      <span class="d-none d-sm-inline">Item</span> 2</a
+                    >
+                  </li>
+                </ul> -->
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="nav-link px-0 align-middle"
+                  @click="typeSel"
+                  value="microphone"
+                >
+                  <i class="fs-4 bi-table"></i>
+                  <span class="ms-1 d-none d-sm-inline">麥克風組</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="nav-link px-0 align-middle"
+                  @click="typeSel"
+                  value="instrument"
+                >
+                  <i class="fs-4 bi-table"></i>
+                  <span class="ms-1 d-none d-sm-inline">樂器</span></a
+                >
+              </li>
+            </ul>
+            <hr />
+            <div class="dropdown pb-4">
+              <a
+                href="#"
+                class="
+                  d-flex
+                  align-items-center
+                  text-white text-decoration-none
+                  dropdown-toggle
+                "
+                id="dropdownUser1"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  src="https://github.com/mdo.png"
+                  alt="hugenerd"
+                  width="30"
+                  height="30"
+                  class="rounded-circle"
+                />
+                <span class="d-none d-sm-inline mx-1">loser</span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+                <li><a class="dropdown-item" href="#">New project...</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li><a class="dropdown-item" href="#">Sign out</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col py-3">
+          <div class="row">
+            <div
+              v-for="(item, index) in equipmentVal"
+              :key="index"
+              class="col-3 item"
+            >
+              <div class="itemDiv">
+                <div class="img">
+                  <img :src="item.photo" width="100" alt="" />
+                </div>
+                <h5>{{ item.type }}</h5>
+                <p class="intro">{{ item.intro }}</p>
+                <button class="btn btn-secondary">加入購物車</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -136,8 +257,7 @@ export default {
             type: "120CM",
             intro:
               "for acting as a financial organization. LEORM is a crowdfunding platform  ",
-            photo:
-              "https://ct.yimg.com/xd/api/res/1.2/no23MCPgTILqU24r8FCcgg--/YXBwaWQ9eXR3YXVjdGlvbnNlcnZpY2U7aD00MDA7cT04NTtyb3RhdGU9YXV0bzt3PTQwMA--/https://s.yimg.com/ob/image/1071af80-cf40-4ba7-94f6-0b3b63ffec4c.jpg",
+            photo: "http://9iactive.com/wp-content/uploads/2021/03/images.jpg",
           },
           {
             type: "200CM",
@@ -197,8 +317,7 @@ export default {
           },
           {
             type: "bass",
-            intro:
-              "Brickfunding platform has published an interview ",
+            intro: "Brickfunding platform has published an interview ",
             photo:
               "https://i4.momoshop.com.tw/1620854006/goodsimg/0008/771/162/spec/8771162_01_003_R_m.webp",
           },
