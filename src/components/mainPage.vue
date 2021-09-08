@@ -155,12 +155,12 @@
               >
                 <img
                   src="https://github.com/mdo.png"
-                  alt="hugenerd"
+                  alt="sss"
                   width="30"
                   height="30"
                   class="rounded-circle"
                 />
-                <span class="d-none d-sm-inline mx-1">loser</span>
+                <span class="d-none d-sm-inline mx-1">Mark</span>
               </a>
               <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
                 <li><a class="dropdown-item" href="#">New project...</a></li>
@@ -187,7 +187,14 @@
                 </div>
                 <h5>{{ item.type }}</h5>
                 <p class="intro">{{ item.intro }}</p>
-                <button class="btn btn-secondary">加入購物車</button>
+                <div class="itemPrice">
+                  <div class="originPrice">原價: ${{ item.price }}</div>
+                  <div>優惠價: ${{ item.salePrice }}</div>
+                </div>
+                <div class="buttonGroup"> 
+                  <button class="btn btn-light moreInfo">查看更多</button>
+                  <button class="btn btn-secondary ms-5">加入購物車</button>
+                </div>
               </div>
             </div>
           </div>
@@ -217,6 +224,8 @@ export default {
               "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, labore. ",
             photo:
               "https://ct.yimg.com/xd/api/res/1.2/no23MCPgTILqU24r8FCcgg--/YXBwaWQ9eXR3YXVjdGlvbnNlcnZpY2U7aD00MDA7cT04NTtyb3RhdGU9YXV0bzt3PTQwMA--/https://s.yimg.com/ob/image/1071af80-cf40-4ba7-94f6-0b3b63ffec4c.jpg",
+            price: "7500",
+            salePrice: "7000",
           },
           {
             type: "Yamaha A14",
@@ -224,6 +233,8 @@ export default {
               "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, ipsum! ",
             photo:
               "https://ct.yimg.com/xd/api/res/1.2/no23MCPgTILqU24r8FCcgg--/YXBwaWQ9eXR3YXVjdGlvbnNlcnZpY2U7aD00MDA7cT04NTtyb3RhdGU9YXV0bzt3PTQwMA--/https://s.yimg.com/ob/image/1071af80-cf40-4ba7-94f6-0b3b63ffec4c.jpg",
+            price: "9000",
+            salePrice: "8500",
           },
           {
             type: "Yamaha A16",
@@ -231,6 +242,8 @@ export default {
               "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, illo.",
             photo:
               "https://ct.yimg.com/xd/api/res/1.2/no23MCPgTILqU24r8FCcgg--/YXBwaWQ9eXR3YXVjdGlvbnNlcnZpY2U7aD00MDA7cT04NTtyb3RhdGU9YXV0bzt3PTQwMA--/https://s.yimg.com/ob/image/1071af80-cf40-4ba7-94f6-0b3b63ffec4c.jpg",
+            price: "10500",
+            salePrice: "10000",
           },
         ],
         spotlight: [
@@ -238,6 +251,8 @@ export default {
             type: "舞台追焦燈",
             intro: "Our average return on investments is 12.75%. Meanwhile",
             photo: "https://cf.shopee.tw/file/c5f83fcccbe6843433fecf4880aaf440",
+            price: "6000",
+            salePrice: "5000",
           },
         ],
         truss: [
@@ -247,17 +262,23 @@ export default {
               "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, illum? ",
             photo:
               "https://ct.yimg.com/xd/api/res/1.2/UT_q0bYGtviAlPoknL3TWg--/YXBwaWQ9eXR3YXVjdGlvbnNlcnZpY2U7aD0zMDE7cT04NTtyb3RhdGU9YXV0bzt3PTQwMA--/https://s.yimg.com/ob/image/157d7981-3545-483a-864d-fd74db80a813.jpg",
+            price: "500",
+            salePrice: "300",
           },
           {
             type: "45CM",
             intro: "LEORM is registered in Estonia and licensed  ",
             photo: "http://9iactive.com/wp-content/uploads/2021/03/images.jpg",
+            price: "1000",
+            salePrice: "800",
           },
           {
             type: "120CM",
             intro:
               "for acting as a financial organization. LEORM is a crowdfunding platform  ",
             photo: "http://9iactive.com/wp-content/uploads/2021/03/images.jpg",
+            price: "1200",
+            salePrice: "1000",
           },
           {
             type: "200CM",
@@ -265,6 +286,8 @@ export default {
               "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, unde. ",
             photo:
               "https://thumbs.static-thomann.de/thumb/orig/pics/bdb/441710/13194326_800.jpg",
+            price: "2000",
+            salePrice: "1600",
           },
         ],
         microphone: [
@@ -274,24 +297,32 @@ export default {
               "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, dolor. ",
             photo:
               "https://s.yimg.com/ut/api/res/1.2/nKBeBQ17UgrQj6Yr1P.2DQ--~B/YXBwaWQ9eXR3bWFsbDtjYz0zMTUzNjAwMDtoPTYwMDtxPTEwMDt3PTYwMA--/https://s.yimg.com/fy/5bb0/item/p0736202502219-item-4387xf4x0800x0800-m.jpg",
+            price: "1200",
+            salePrice: "1000",
           },
           {
             type: "4支/組",
             intro:
               "orem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, labore ",
             photo: "https://cf.shopee.tw/file/209f1446f11b6d66f370e3d6bcec8c81",
+            price: "2200",
+            salePrice: "1800",
           },
           {
             type: "6支/組",
             intro:
               "Osaka was broken as she served for the match in the second set, and a poor t",
             photo: "https://cf.shopee.tw/file/209f1446f11b6d66f370e3d6bcec8c81",
+            price: "3200",
+            salePrice: "3000",
           },
           {
             type: "8支/組",
             intro:
               "The teenager could not contain her smile as she secured a fantastic win. ",
             photo: "https://cf.shopee.tw/file/209f1446f11b6d66f370e3d6bcec8c81",
+            price: "4500",
+            salePrice: "4000",
           },
         ],
         instrument: [
@@ -301,12 +332,16 @@ export default {
               "investors to enter into loan and investment contracts with Eur ",
             photo:
               "https://d1aeri3ty3izns.cloudfront.net/media/23/235459/600/preview_4.jpg",
+            price: "2500",
+            salePrice: "2000",
           },
           {
             type: "keyboard",
             intro: "LEORM is registered in Estonia and licensed  ",
             photo:
               "https://www.bhphotovideo.com/images/images2500x2500/Yamaha_EZ220_EZ_220_61_key_Lighted_Key_839760.jpg",
+            price: "4500",
+            salePrice: "4000",
           },
           {
             type: "drum",
@@ -314,12 +349,16 @@ export default {
               "for acting as a financial organization. LEORM is a crowdfunding platform  ",
             photo:
               "https://static.roland.com/products/vad_series/images/vad506_main.jpg",
+            price: "5500",
+            salePrice: "5000",
           },
           {
             type: "bass",
             intro: "Brickfunding platform has published an interview ",
             photo:
               "https://i4.momoshop.com.tw/1620854006/goodsimg/0008/771/162/spec/8771162_01_003_R_m.webp",
+            price: "3000",
+            salePrice: "2500",
           },
           {
             type: "Saxphone",
@@ -327,6 +366,8 @@ export default {
               "Brickfunding platform has published an interview about LEORM crowdf ",
             photo:
               "https://b.ecimg.tw/items/DMAFE4A90085WJ4/000001_1496476988.jpg",
+            price: "7000",
+            salePrice: "6500",
           },
         ],
       };
