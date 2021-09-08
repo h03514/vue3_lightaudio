@@ -191,8 +191,10 @@
                   <div class="originPrice">原價: ${{ item.price }}</div>
                   <div>優惠價: ${{ item.salePrice }}</div>
                 </div>
-                <div class="buttonGroup"> 
-                  <button class="btn btn-light moreInfo">查看更多</button>
+                <div class="buttonGroup">
+                  <button class="btn btn-light moreInfo" @click="showItemInfo">
+                    查看更多
+                  </button>
                   <button class="btn btn-secondary ms-5">加入購物車</button>
                 </div>
               </div>
@@ -205,6 +207,7 @@
 </template>
 
 <script>
+
 // import { reactive } from '@vue/reactivity';
 export default {
   data() {
@@ -386,6 +389,9 @@ export default {
       if (this.modelType == "樂器") {
         this.equipmentVal = equipment.instrument;
       }
+    },
+    showItemInfo(e) {
+      console.log(e);
     },
   },
 };

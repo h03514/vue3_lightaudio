@@ -3,17 +3,21 @@
   <!-- <HelloWorld></HelloWorld> -->
   <!-- <testEmit1></testEmit1> -->
   <mainPage></mainPage>
+  <itemInfoPage></itemInfoPage>
+
 </template>
 
 <script>
 import mainPage from "./components/mainPage.vue";
+import itemInfoPage from "./components/itemInfoPage.vue";
 
 import { reactive } from "vue";
 
 export default {
   name: "App",
   components: {
-    mainPage
+    mainPage,
+    itemInfoPage
   },
 
   setup() {
