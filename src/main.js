@@ -1,9 +1,10 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import "@fortawesome/vue-fontawesome";
-import "@/assets/scss/bootstrap.min.css";
+// import "@/assets/scss/bootstrap.min.css";
+import "@/assets/scss/reset.scss";
 import "@/assets/scss/main.scss";
-import "@/assets/js/bootstrap.bundle.min";
+// import "@/assets/js/bootstrap.bundle.min";
 import "@/assets/js/equipment";
 
 createApp(App).mount('#app')

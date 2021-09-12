@@ -4,7 +4,6 @@
   <!-- <testEmit1></testEmit1> -->
   <mainPage></mainPage>
   <itemInfoPage></itemInfoPage>
-
 </template>
 
 <script>
@@ -17,12 +16,12 @@ export default {
   name: "App",
   components: {
     mainPage,
-    itemInfoPage
+    itemInfoPage,
   },
 
   setup() {
     let btnMsg = reactive({
-      name: "Computer"
+      name: "Computer",
     });
     function showEquipmentData(da) {
       // this.flag = !this.flag;'
@@ -30,15 +29,16 @@ export default {
     }
     return {
       showEquipmentData,
-      btnMsg
+      btnMsg,
     };
-  }
+  },
 };
 </script>
 
-<style>
+<style lang="scss">
+@import "~bootstrap/scss/bootstrap";
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Microsoft JhengHei", Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
