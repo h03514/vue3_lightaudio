@@ -1,5 +1,7 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from 'vue';
+import App from './App.vue';
+import router from './router';
+
 import "@fortawesome/vue-fontawesome";
 // import "@/assets/scss/bootstrap.min.css";
 import "@/assets/scss/reset.scss";
@@ -7,8 +9,8 @@ import "@/assets/scss/main.scss";
 // import "@/assets/js/bootstrap.bundle.min";
 import "@/assets/js/equipment";
 
-createApp(App).mount('#app')
 
+createApp(App).use(router).mount('#app');
 // import { createApp } from 'vue'
 // import App from './App.vue'
 // import store from './store'

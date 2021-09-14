@@ -58,7 +58,9 @@
                   vlaue="audio"
                 >
                   <i class="fs-4 bi-speedometer2"></i>
-                  <span class="ms-1 d-none d-sm-inline text-white">外場音響</span>
+                  <span class="ms-1 d-none d-sm-inline text-white"
+                    >外場音響</span
+                  >
                 </a>
                 <!-- <ul
                   class="collapse show nav flex-column ms-1"
@@ -85,7 +87,9 @@
                   value="spotlight"
                 >
                   <i class="fs-4 bi-table"></i>
-                  <span class="ms-1 d-none d-sm-inline text-white">Spot Light</span></a
+                  <span class="ms-1 d-none d-sm-inline text-white"
+                    >Spot Light</span
+                  ></a
                 >
               </li>
               <li>
@@ -97,7 +101,9 @@
                   value="truss"
                 >
                   <i class="fs-4 bi-bootstrap"></i>
-                  <span class="ms-1 d-none d-sm-inline text-white">Truss</span></a
+                  <span class="ms-1 d-none d-sm-inline text-white"
+                    >Truss</span
+                  ></a
                 >
                 <!-- <ul
                   class="collapse nav flex-column ms-1"
@@ -124,7 +130,9 @@
                   value="microphone"
                 >
                   <i class="fs-4 bi-table"></i>
-                  <span class="ms-1 d-none d-sm-inline text-white">麥克風組</span></a
+                  <span class="ms-1 d-none d-sm-inline text-white"
+                    >麥克風組</span
+                  ></a
                 >
               </li>
               <li>
@@ -135,7 +143,9 @@
                   value="instrument"
                 >
                   <i class="fs-4 bi-table"></i>
-                  <span class="ms-1 d-none d-sm-inline text-white">樂器</span></a
+                  <span class="ms-1 d-none d-sm-inline text-white"
+                    >樂器</span
+                  ></a
                 >
               </li>
             </ul>
@@ -192,9 +202,14 @@
                   <div>優惠價: ${{ item.salePrice }}</div>
                 </div>
                 <div class="buttonGroup">
-                  <button class="btn btn-light moreInfo" @click="showItemInfo(item)">
+                  
+                  <router-link to="/iteminfo"><button
+                    class="btn btn-light moreInfo"
+                    @click="showItemInfo(item)"
+                  >
                     查看更多
-                  </button>
+                  </button></router-link>
+                  <router-view></router-view>
                   <button class="btn btn-secondary ms-5">加入購物車</button>
                 </div>
               </div>

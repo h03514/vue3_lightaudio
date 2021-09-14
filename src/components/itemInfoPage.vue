@@ -1,5 +1,7 @@
 <template>
-  <div class="itemInfoPage" ></div>
+  <div class="itemInfoPage" >
+    abc
+  </div>
 </template>
 
 <script>
