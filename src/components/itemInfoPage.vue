@@ -1,6 +1,6 @@
 <template>
   <div class="itemInfoPage" v-if="(showModal = 1)">
-    <div>
+    <div class="bgc">
       <div
         class="moddal"
         id="exampleModal"
@@ -16,6 +16,7 @@
                 class="btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
+                @click="closeModal"
               ></button>
             </div>
             <div class="modal-body">...</div>
@@ -46,6 +47,7 @@ export default {
   data() {
     return {};
   },
+
   setup() {
     let showModal = ref(0);
     emitter.on("hello", (val) => {
@@ -55,8 +57,13 @@ export default {
       console.log(showModal);
     });
 
+    function closeModal(){
+      document.querySelector('.bgc').remove();
+    }
+
     return {
       showModal,
+      closeModal
     };
   },
 };
