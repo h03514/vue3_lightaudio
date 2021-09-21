@@ -202,19 +202,20 @@
                   <div>優惠價: ${{ item.salePrice }}</div>
                 </div>
                 <div class="buttonGroup">
-                  
-                  <router-link to="/iteminfo"><button
-                    class="btn btn-light moreInfo"
-                    @click="showItemInfo(item)"
+                  <router-link to="/iteminfo"
+                    ><button
+                      class="btn btn-light moreInfo"
+                      @click="showItemInfo(item)"
+                    >
+                      查看更多
+                    </button></router-link
                   >
-                    查看更多
-                  </button></router-link>
-                  <router-view></router-view>
                   <button class="btn btn-secondary ms-5">加入購物車</button>
                 </div>
               </div>
             </div>
           </div>
+          <router-view></router-view>
         </div>
       </div>
     </div>
@@ -410,7 +411,10 @@ export default {
   },
   setup() {
     function showItemInfo(e) {
-      emitter.emit("hello", reactive(e));
+      let aa={};
+      aa.data= e;
+      aa.type=true;
+      emitter.emit("hello", reactive(aa));
     }
     return { showItemInfo };
   },
