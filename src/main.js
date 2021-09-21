@@ -7,7 +7,6 @@ import "@fortawesome/vue-fontawesome";
 import "@/assets/scss/reset.scss";
 import "@/assets/scss/main.scss";
 // import "@/assets/js/bootstrap.bundle.min";
-import "@/assets/js/equipment";
 
 
 createApp(App).use(router).mount('#app');
