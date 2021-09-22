@@ -411,10 +411,8 @@ export default {
   },
   setup() {
     function showItemInfo(e) {
-      let aa={};
-      aa.data= e;
-      aa.type=true;
-      emitter.emit("hello", reactive(aa));
+      console.log(e);
+      emitter.emit("hello", reactive(e));
     }
     return { showItemInfo };
   },
